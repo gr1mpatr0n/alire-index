@@ -1,0 +1,21 @@
+name = "gnat_aarch64_elf"
+version = "15.2.1"
+provides = ["gnat=15.2.1"]
+description = "The GNAT Ada compiler - AArch64 cross-compiler"
+maintainers = ["benjamin@branchware.co.uk"]
+maintainers-logins = ["gr1mpatr0n"]
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+website = "https://github.com/gr1mpatr0n/alire-index"
+
+auto-gpr-with = false
+
+[configuration]
+disabled = true
+
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
+[origin."case(os)".linux."case(host-arch)".x86-64]
+binary = true
+url = "https://github.com/gr1mpatr0n/alire-index/releases/download/aarch64-cross/gnat-aarch64-elf-linux64-x86_64-15.2.0-1.tar.gz"
+hashes = ["sha256:1baa00a8de1788d0fa4917c63afcfa492648e29c15be60c4895a3f6b0b0961b9"]
